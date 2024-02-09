@@ -25,7 +25,7 @@ exports.addTodo = async (req, res) => {
     }
 }
 exports.updateTodo = async (req, res) => {
-    await Todo, Todo.findByIdAndDelete(req.params.id, req.body)
+    await Todo.findByIdAndUpdate(req.params.id, req.body)
     try {
         res.status(200).json({
             message: "update sucess"
